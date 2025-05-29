@@ -1,0 +1,208 @@
+body {
+    background-image: url('images/image-Photoroom.png');
+    background-color: #E48989;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;    /*-- Classic 8-bit gaming style*/
+}
+
+.timer-container {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.title {
+    font-size: 2.5em;
+    margin: 0;
+    transform: rotate(20deg);
+    position: relative;
+    top: 40px;
+    right: -110px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.timer-display {
+    margin: 20px 0;
+    padding-top: 20px;
+}
+
+.timer-section {
+    margin: 15px 0;
+}
+
+.timer-section:first-child .digit-box {
+    /* Focus timer digits */
+    font-size: 2.5em;
+    width: 40px;
+    padding: 5px;
+}
+
+.timer-section:first-child .label {
+    /* Focus label */
+    font-size: 0.8em;
+}
+
+.timer-section:last-child .digit-box {
+    /* Break timer digits */
+    font-size: 1.8em;
+    width: 30px;
+    padding: 4px;
+}
+
+.timer-section:last-child .label {
+    /* Break label */
+    font-size: 0.6em;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.digit-box {
+    background-color: rgba(125, 11, 11, 0.23);
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.digit-box::-webkit-inner-spin-button,
+.digit-box::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.digit-box:focus {
+    outline: none;
+    background-color: rgba(125, 11, 11, 0.4);
+}
+
+.separator {
+    font-size: 2.5em;
+    margin: 0 2px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group label {
+    font-size: 0.9em;
+}
+
+.input-group input {
+    width: 60px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    background-color: rgba(125, 11, 11, 0.23);
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+.input-group input::-webkit-inner-spin-button,
+.input-group input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.action-button {
+    background-color: rgba(125, 11, 11, 0.23);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.7em;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    width: 170px;
+    font-family: 'Press Start 2P', cursive;
+    border: none;
+}
+
+.action-button:hover {
+    background-color: rgba(125, 11, 11, 0.4);
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 20px;
+}
+
+/* You might need to adjust font sizes for different fonts: */
+/* Font size adjustments for different fonts:
+.digit-box.press-start {
+    font-size: 2em;
+}
+
+.digit-box.vt323 {
+    font-size: 3em;
+}
+*/
+
+/* Example of how to mix different fonts:
+.title {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.digit-box {
+    font-family: 'VT323', monospace;
+}
+
+.label {
+    font-family: 'Silkscreen', cursive;
+}
+*/

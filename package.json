@@ -1,0 +1,23 @@
+{
+  "name": "pomodoroapp",
+  "version": "1.0.0",
+  "description": "Pomodoro application built using electronJS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasrigby/PomodoroApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomasrigby/PomodoroApp/issues"
+  },
+  "homepage": "https://github.com/thomasrigby/PomodoroApp/main.js",
+  "devDependencies": {
+    "electron": "^36.3.1"
+  }
+}
