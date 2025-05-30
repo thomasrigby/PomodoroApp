@@ -1,102 +1,103 @@
 body {
     background-image: url('images/image-Photoroom.png');
     background-color: #E48989;
-    background-size: 100vh;
+    background-size: auto 100vh;
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 100vh;
     margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;    /*-- Classic 8-bit gaming style*/
+}
+
+.app-wrapper {
+    min-height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Press Start 2P', cursive;    /*-- Classic 8-bit gaming style*/
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .timer-container {
     text-align: center;
     color: white;
-    padding: 20px;
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: min(90vw, 90vh);
+    height: min(90vw, 90vh);
+    max-width: 800px;
+    max-height: 800px;
+    min-width: 280px;
+    min-height: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 40px;
+    position: relative;
+    padding: min(3vw, 3vh);
+    padding-top: min(12vw, 12vh);
+    box-sizing: border-box;
 }
 
 .title {
-    font-size: 2.5em;
+    font-size: min(5vw, 5vh);
     margin: 0;
     transform: rotate(20deg);
-    position: relative;
-    top: 30px;
-    right: -110px;
+    position: absolute;
+    top: 8%;
+    right: -10%;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: white;
+    white-space: nowrap;
 }
+
 .completion_message {
-    font-size: 0.8em;
-    margin: 10px 0;
+    font-size: min(2.5vw, 2.5vh);
+    margin: 0;
     position: absolute;
-    left: 80px;
+    left: -40%;
     top: 30%;
     transform: rotate(-20deg);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 200px;
+    padding: min(1vw, 1vh);
+    border-radius: min(0.5vw, 0.5vh);
+    max-width: min(40vw, 40vh);
     text-align: left;
     transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
 }
 
 .timer-display {
-    margin: 20px 0;
-    padding-top: 20px;
+    width: min(80vw, 80vh);
+    max-width: 700px;
+    margin: min(10vw, 10vh) 0 min(2vw, 2vh) 0;
+    padding-top: min(4vw, 4vh);
+    display: flex;
+    flex-direction: column;
+    gap: min(2vw, 2vh);
 }
 
 .timer-section {
-    margin: 15px 0;
-}
-
-.timer-section:first-child .digit-box {
-    /* Focus timer digits */
-    font-size: 2.5em;
-    width: 40px;
-    padding: 5px;
-}
-
-.timer-section:first-child .label {
-    /* Focus label */
-    font-size: 0.8em;
-}
-
-.timer-section:last-child .digit-box {
-    /* Break timer digits */
-    font-size: 1.8em;
-    width: 30px;
-    padding: 4px;
-}
-
-.timer-section:last-child .label {
-    /* Break label */
-    font-size: 0.6em;
+    margin: min(1.5vw, 1.5vh) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(1vw, 1vh);
+    width: 100%;
 }
 
 .time {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: min(1vw, 1vh);
 }
 
 .label {
     display: block;
-    margin-bottom: 5px;
-    padding-top: 10px;
+    margin-bottom: clamp(3px, 0.8vmin, 5px);
+    color: white;
 }
 
 .digit-box {
@@ -122,16 +123,56 @@ body {
     background-color: rgba(125, 11, 11, 0.4);
 }
 
+.timer-section:first-child {
+    /* Focus timer section */
+    transform: scale(clamp(0.8, 1.2vmin, 1.2));
+}
+
+.timer-section:first-child .digit-box {
+    /* Focus timer digits */
+    font-size: min(4vw, 4vh);
+    width: min(8vw, 8vh);
+    height: min(10vw, 10vh);
+    padding: min(0.5vw, 0.5vh);
+}
+
+.timer-section:first-child .label {
+    /* Focus label */
+    font-size: min(2vw, 2vh);
+}
+
+.timer-section:last-child {
+    /* Break timer section */
+    transform: scale(clamp(0.7, 1vmin, 1));
+    margin-top: clamp(15px, 3vmin, 30px);
+}
+
+.timer-section:last-child .digit-box {
+    /* Break timer digits */
+    font-size: min(3vw, 3vh);
+    width: min(6vw, 6vh);
+    height: min(8vw, 8vh);
+    padding: min(0.4vw, 0.4vh);
+}
+
+.timer-section:last-child .label {
+    /* Break label */
+    font-size: min(1.5vw, 1.5vh);
+}
+
 .separator {
-    font-size: 2.5em;
-    margin: 0 2px;
+    font-size: min(4vw, 4vh);
+    margin: 0 min(1vw, 1vh);
+    color: white;
 }
 
 .controls {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: min(1.5vw, 1.5vh);
+    margin-top: min(1vw, 1vh);
 }
 
 .input-group {
@@ -166,19 +207,22 @@ body {
 .action-button {
     background-color: rgba(125, 11, 11, 0.23);
     color: white;
-    padding: 8px 20px;
-    border-radius: 10px;
+    padding: min(1.2vw, 1.2vh) min(3vw, 3vh);
+    border-radius: min(1vw, 1vh);
     cursor: pointer;
-    font-size: 0.7em;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-    width: 170px;
+    font-size: min(1.8vw, 1.8vh);
+    margin: min(0.8vw, 0.8vh) 0;
+    /* transition: all 0.3s ease; */
+    width: min(30vw, 30vh);
+    max-width: 300px;
+    min-width: 120px;
     font-family: 'Press Start 2P', cursive;
     border: none;
 }
 
 .action-button:hover {
     background-color: rgba(125, 11, 11, 0.4);
+    transform: scale(1.05);
 }
 
 h1 {
@@ -198,19 +242,23 @@ button {
 }
 
 .volume-on {
-    width: 50px;
-    height: 50px;
+    width: min(6vh, 50px);
+    height: min(6vh, 50px);
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 2vh;
+    right: 2vh;
 }
 
 .volume-icon {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 50px;  /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    top: 5%;
+    right: 5%;
+    width: min(6vw, 6vh);
+    height: min(6vw, 6vh);
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 50px;
+    max-height: 50px;
     cursor: pointer;
     transition: transform 0.2s ease;
     user-select: none;
