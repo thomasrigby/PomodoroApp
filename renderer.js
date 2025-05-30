@@ -6,12 +6,15 @@ window.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-focus');
     const resetButton = document.getElementById('reset');
     const completionMessage = document.getElementById('completion_message');
+    const volumeIcon = document.getElementById('volume-icon');
+    const timerSound = document.getElementById('timer-sound');
 
     let timerInterval;
     let isRunning = false;
     let isFocusTime = true;
     let savedFocusTime = 25 * 60; // Store initial focus time in seconds
     let savedBreakTime = 5 * 60;  // Store initial break time in seconds
+    let isMuted = false;
 
     // Function to get time from digit boxes (returns seconds)
     function getTimeFromDigits(digits) {
@@ -66,6 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             isRunning = false;
+            playTimerEndSound(); // Play sound when timer ends
 
             if (isFocusTime) {
                 // Focus timer finished
@@ -139,4 +143,21 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Volume toggle functionality
+    volumeIcon.addEventListener('click', () => {
+        isMuted = !isMuted;
+        volumeIcon.src = isMuted ? 'images/volume_off.png' : 'images/volume_on.png';
+        volumeIcon.classList.toggle('muted', isMuted);
+    });
+
+    // Function to play sound
+    function playTimerEndSound() {
+        if (!isMuted && timerSound) {
+            timerSound.currentTime = 0; // Reset sound to start
+            timerSound.play().catch(error => console.log('Error playing sound:', error));
+        }
+    }
+
 });
+    
