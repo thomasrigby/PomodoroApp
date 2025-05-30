@@ -32,10 +32,25 @@ body {
     margin: 0;
     transform: rotate(20deg);
     position: relative;
-    top: 40px;
+    top: 30px;
     right: -110px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: white;
+}
+.completion_message {
+    font-size: 0.8em;
+    margin: 10px 0;
+    position: absolute;
+    left: 80px;
+    top: 30%;
+    transform: rotate(-20deg);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 200px;
+    text-align: left;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .timer-display {
@@ -182,27 +197,3 @@ button {
     margin-top: 20px;
 }
 
-/* You might need to adjust font sizes for different fonts: */
-/* Font size adjustments for different fonts:
-.digit-box.press-start {
-    font-size: 2em;
-}
-
-.digit-box.vt323 {
-    font-size: 3em;
-}
-*/
-
-/* Example of how to mix different fonts:
-.title {
-    font-family: 'Press Start 2P', cursive;
-}
-
-.digit-box {
-    font-family: 'VT323', monospace;
-}
-
-.label {
-    font-family: 'Silkscreen', cursive;
-}
-*/
