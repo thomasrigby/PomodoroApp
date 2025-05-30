@@ -15,67 +15,72 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
+    padding: min(20px, 2vh);
+    padding-top: min(15vh, 80px);
     box-sizing: border-box;
+    overflow: auto;
 }
 
 .timer-container {
     text-align: center;
     color: white;
     width: min(90vw, 90vh);
-    height: min(90vw, 90vh);
+    height: auto;
+    min-height: min(85vh, 600px);
     max-width: 800px;
-    max-height: 800px;
-    min-width: 280px;
-    min-height: 280px;
+    min-width: min(280px, 90vw);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     padding: min(3vw, 3vh);
-    padding-top: min(12vw, 12vh);
+    padding-top: min(10vw, 10vh);
     box-sizing: border-box;
+    margin: 0;
 }
 
 .title {
-    font-size: min(5vw, 5vh);
+    font-size: clamp(16px, min(4vw, 4vh), 32px);
     margin: 0;
-    transform: rotate(20deg);
+    transform: rotate(15deg);
     position: absolute;
-    top: 8%;
-    right: -10%;
+    top: min(5%, 20px);
+    right: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: white;
     white-space: nowrap;
+    max-width: 90%;
+    padding: min(1vw, 1vh);
+    z-index: 10;
 }
 
 .completion_message {
-    font-size: min(2.5vw, 2.5vh);
+    font-size: min(2.0vw, 2.0vh);
     margin: 0;
     position: absolute;
-    left: -40%;
-    top: 30%;
-    transform: rotate(-20deg);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    left: 0;
+    top: 45%;
+    transform: rotate(-10deg);
     color: white;
     padding: min(1vw, 1vh);
     border-radius: min(0.5vw, 0.5vh);
-    max-width: min(40vw, 40vh);
+    max-width: min(30vw, 30vh);
     text-align: left;
     transition: opacity 0.3s ease-in-out;
-    white-space: nowrap;
+    white-space: text-wrap;
+    z-index: 10;
 }
 
 .timer-display {
-    width: min(80vw, 80vh);
-    max-width: 700px;
-    margin: min(10vw, 10vh) 0 min(2vw, 2vh) 0;
-    padding-top: min(4vw, 4vh);
+    width: 100%;
+    max-width: min(700px, 90%);
+    margin: min(6vw, 6vh) auto min(2vw, 2vh);
+    padding-top: min(2vw, 2vh);
     display: flex;
     flex-direction: column;
-    gap: min(2vw, 2vh);
+    gap: min(1.5vw, 1.5vh);
 }
 
 .timer-section {
@@ -92,6 +97,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: min(1vw, 1vh);
+    flex-wrap: wrap;
+    padding: 0 min(2vw, 2vh);
 }
 
 .label {
@@ -109,6 +116,8 @@ body {
     font-family: 'Press Start 2P', cursive;
     -moz-appearance: textfield;
     appearance: textfield;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .digit-box::-webkit-inner-spin-button,
