@@ -13,6 +13,7 @@ A stylish, pixel-art themed Pomodoro timer built with Electron.js. This applicat
 - 🎮 Retro Font: Uses "Press Start 2P" font for authentic pixel art feel
 - 🔄 Session Management: Automatic switching between focus and break periods
 - 💾 Time Input: Digital clock-style input boxes for precise time setting
+- 🖼️ Custom App Icon: Tomato-themed application icon across all platforms
 
 ## Installation
 
@@ -31,7 +32,12 @@ cd PomodoroApp
 npm install
 ```
 
-4. Start the application:
+4. Generate application icons:
+```bash
+npm run generate-icons
+```
+
+5. Start the application:
 ```bash
 npm start
 ```
@@ -66,8 +72,32 @@ This project is built with:
 
 To package the application:
 
+1. Generate icons (if not already done):
+```bash
+npm run generate-icons
+```
+
+2. Build the application:
 ```bash
 npm run make
+```
+
+This will create platform-specific builds with custom icons:
+- macOS: `.icns` format
+- Windows: `.ico` format
+- Linux: `.png` format
+
+### Project Structure
+
+```
+PomodoroApp/
+├── images/
+│   ├── image-Photoroom.png    # Source icon image
+│   ├── icons/                 # Generated application icons
+│   ├── volume_on.png          # Volume control icons
+│   └── volume_off.png
+├── sounds/                    # Notification sound files
+└── ... other project files
 ```
 
 ## License
@@ -79,6 +109,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Pixel art assets and sound effects used under appropriate licenses
 - "Press Start 2P" font from Google Fonts
 - Built with Electron Forge
+- Icons generated using electron-icon-maker
 
 ## Contributing
 

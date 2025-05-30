@@ -8,7 +8,9 @@ dist/
 
 # Electron Forge output
 .electron-forge/
-forge.config.js
+
+# Generated icons
+images/icons/
 
 # OS generated files
 .DS_Store
@@ -33,3 +35,6 @@ debug.log
 
 # Environment variables
 venv/
+
+# Electron specific
+.electron-temp/

@@ -1,5 +1,5 @@
 {
-  "name": "pomodoroapp",
+  "name": "pomodoro",
   "version": "1.0.0",
   "description": "Pomodoro application built using electronJS",
   "main": "main.js",
@@ -7,7 +7,8 @@
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "generate-icons": "electron-icon-maker --input=./images/image-Photoroom.png --output=./images"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,8 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
     "@electron-forge/plugin-fuses": "^7.8.1",
     "@electron/fuses": "^1.8.0",
-    "electron": "^36.3.1"
+    "electron": "^36.3.1",
+    "electron-icon-maker": "^0.0.5"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
