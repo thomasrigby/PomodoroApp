@@ -10,10 +10,6 @@ A stylish, pixel-art themed Pomodoro timer built with Electron.js. This applicat
 - ☕ Break Timer: Adjustable break periods
 - 🎨 Pixel Art Design: Retro-gaming aesthetic with pixel art tomato theme
 - 🔊 Sound Notifications: Audio alerts when sessions complete
-- 🎮 Retro Font: Uses "Press Start 2P" font for authentic pixel art feel
-- 🔄 Session Management: Automatic switching between focus and break periods
-- 💾 Time Input: Digital clock-style input boxes for precise time setting
-- 🖼️ Custom App Icon: Tomato-themed application icon across all platforms
 
 ## Installation
 
@@ -87,19 +83,6 @@ This will create platform-specific builds with custom icons:
 - Windows: `.ico` format
 - Linux: `.png` format
 
-### Project Structure
-
-```
-PomodoroApp/
-├── images/
-│   ├── image-Photoroom.png    # Source icon image
-│   ├── icons/                 # Generated application icons
-│   ├── volume_on.png          # Volume control icons
-│   └── volume_off.png
-├── sounds/                    # Notification sound files
-└── ... other project files
-```
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -111,10 +94,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with Electron Forge
 - Icons generated using electron-icon-maker
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request 
